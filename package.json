@@ -1,0 +1,53 @@
+{
+  "name": "@paquette/api",
+  "private": true,
+  "version": "0.1.7",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": "^12.9",
+    "npm": "^6.10",
+    "yarn": "^1.17"
+  },
+  "scripts": {
+    "build": "npm run db:migrate && ./node_modules/.bin/tsc",
+    "db": "ts-node ./node_modules/.bin/typeorm",
+    "db:migrate": "ts-node ./node_modules/.bin/typeorm migration:run",
+    "add-migration": "ts-node ./node_modules/.bin/typeorm migration:generate -n",
+    "update-database": "ts-node ./node_modules/.bin/typeorm migration:run",
+    "dev": "nodemon 'src/index.ts' --exec 'ts-node' src/index.ts -e ts,graphql",
+    "format": "./node_modules/.bin/prettier ./src/**/*.{js,ts,tsx} --write",
+    "start": "node ./build/index.js"
+  },
+  "dependencies": {
+    "@types/bcrypt": "^3.0.0",
+    "@types/express": "^4.16.1",
+    "@types/express-session": "^1.15.12",
+    "@types/hashids": "^1.0.30",
+    "@types/node": "^12.0.2",
+    "apollo-server": "^2.5.0",
+    "bcrypt": "^3.0.6",
+    "connect-redis": "^4.0.0",
+    "express": "^4.17.1",
+    "express-session": "^1.16.2",
+    "graphql": "^14.3.1",
+    "hashids": "^1.2.2",
+    "ioredis": "^4.14.0",
+    "lodash": "^4.17.15",
+    "nodemailer": "^6.3.0",
+    "pg": "^7.11.0",
+    "redis": "^2.8.0",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.2.18",
+    "typescript": "3.5.3"
+  },
+  "devDependencies": {
+    "@types/connect-redis": "^0.0.11",
+    "@types/lodash": "^4.14.138",
+    "@types/nodemailer": "^6.2.1",
+    "@types/redis": "^2.8.13",
+    "nodemon": "^1.19.1",
+    "prettier": "^1.17.1",
+    "redis-mock": "^0.46.0",
+    "ts-node": "^8.2.0"
+  }
+}
