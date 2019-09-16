@@ -38,7 +38,7 @@
     "redis": "^2.8.0",
     "reflect-metadata": "^0.1.13",
     "typeorm": "^0.2.18",
-    "typescript": "3.5.3"
+    "typescript": "^3.6.3"
   },
   "devDependencies": {
     "@types/connect-redis": "^0.0.11",
