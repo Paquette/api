@@ -1,7 +1,7 @@
 {
   "name": "@paquette/api",
   "private": true,
-  "version": "0.1.7",
+  "version": "0.0.0",
   "license": "UNLICENSED",
   "engines": {
     "node": "^12.9",
